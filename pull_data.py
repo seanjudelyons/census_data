@@ -69,7 +69,7 @@ def fetch(url: str, session: requests.Session, dest_path: Path):
         logger.error(f"failed to download {url}: {e}")
         raise
 
-def crawl(url: str, session: requests.Session, dest_root: Path, visited: set = None, depth: int = 0, max_depth: int = 10):
+def crawl(url: str, session: requests.Session, dest_root: Path, visited: set = None, depth: int = 0, max_depth: int = 15):
     """crawl with recursion depth and visited url tracking"""
     if visited is None:
         visited = set()
